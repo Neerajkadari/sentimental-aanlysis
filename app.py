@@ -8,18 +8,21 @@ from openai import OpenAI
 
 
 app = Flask(__name__)
+load_dotenv()
 
 # =========================================================
 # CONFIG
 # =========================================================
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+
+
 # =========================================================
 # ANALYSIS LOGIC (same as your code)
 # =========================================================
 
-def analyze_transcript(transcript, openai_api_key, model_name="llama-3.1-8b-instant"):
+def analyze_transcript(transcript, openai_api_key, model_name="gpt-3.5-turbo"):
     """
-    Analyzes a given transcript using the Groq API to get a summary and sentiment.
+    Analyzes a given transcript using the OpenAI API to get a summary and sentiment.
     """
     client = OpenAI(api_key=openai_api_key)
 
@@ -807,7 +810,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p class="hero-subtitle">
                         Building futuristic customer feedback systems with AI-driven sentiment analysis,
                         real-time dashboards, and immersive neon UI. This project showcases a live
-                        transcript analyzer powered by Groq and Flask.
+                        transcript analyzer powered by OpenAI and Flask.
                     </p>
 
                     <div class="cta-row">
