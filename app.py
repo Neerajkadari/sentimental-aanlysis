@@ -12,7 +12,7 @@ app = Flask(__name__)
 # =========================================================
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 
-os.environ['GROQ_API_KEY'] = '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'
+os.environ['GROQ_API_KEY'] = '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'
 # =========================================================
 # ANALYSIS LOGIC (same as your code)
 # =========================================================
@@ -991,4 +991,5 @@ def index():
 if __name__ == "__main__":
     # host="0.0.0.0" lets mobile on same Wi-Fi open it using your PC's IP
     app.run(host="0.0.0.0", port=5000, debug=True)
+
 
